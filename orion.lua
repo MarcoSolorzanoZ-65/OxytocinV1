@@ -30,8 +30,6 @@ local OrionLib = {
 --Feather Icons https://github.com/evoincorp/lucideblox/tree/master/src/modules/util - Created by 7kayoh
 local Icons = {}
 
-local HttpService = game:GetService("HttpService")
-
 local response = request({
     Url = "https://unpkg.com/feather-icons@4.28.0/dist/icons.json",
     Method = "GET",
@@ -45,7 +43,6 @@ if response and response.Success then
     
     if Success then
         print("Icons loaded successfully.")
-        -- You can now use Icons as needed
     else
         warn("\nOrion Library - Failed to load Feather Icons. Error: " .. tostring(Icons) .. "\n")
     end
